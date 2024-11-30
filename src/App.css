@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+.container {
+    width: 100%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.h2 {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loading {
+    width: 50px;
+    height: 50px;
+    border-top: 3px solid green;
+    border-bottom: 3px solid green;
+    border-radius: 50px;
+    margin: 200px auto 0px;
+    animation: rotate 1s linear infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.App-link {
-  color: #61dafb;
+/* .ul_listdata {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+} */
+
+/* .ul_listdata li {
+
+} */
+
+
+.table-responsive {
+    overflow: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-responsive::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+    background-color: transparent;
 }
+
+.table-responsive::-webkit-scrollbar-thumb {
+    width: 3px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #c3c3c3;
+}
+
+table {
+    display: table;
+    border-collapse: collapse;
+}
+
+table thead tr th, table tbody tr td {
+    border: 1px solid #c3c3c3;
+    padding: 5px 20px;
+}
+
+table thead tr th {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+table tbody tr td {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.btn {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: 1px solid #0d6efd;
+    cursor: pointer;
+    padding: 7px 14px;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: 0px;
+    transition: all 0.2s;
+}
+
+.btn:not(:disabled):hover {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.btn:disabled {
+    border-color: #c3c3c3;
+    cursor: auto;
+}
+
+.btn.active {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+
+
+
+@media (width < 576px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+    table tbody tr td:last-child {
+        min-width: 500px;
+    }
+}
+
+
+
+
+
+
+
