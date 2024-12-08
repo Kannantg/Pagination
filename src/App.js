@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState([]);
   const [isloading, setIsloading] = useState(true);
   const [currpage, setCurrpage] = useState(1);
-  const [postperpage, setPostperpage] = useState(10);
+  const [postperpage] = useState(10);
 
   useEffect(() => {
     resData();
@@ -20,17 +20,13 @@ function App() {
     setIsloading(false);
   }
 
-  console.log(data);
-
 
   const lastIndex = currpage * postperpage;
   const firstIndex = lastIndex - postperpage;
   const totalData = data.length / postperpage; 
 
-  console.log(currpage, "totalData");
 
   const finData = data.slice(firstIndex, lastIndex);
-  console.log(finData, "findata");
 
   var arr = [];
 
@@ -39,7 +35,7 @@ function App() {
   }
 
   return (
-    <>
+    <section className='paginationsection'>
       <div className='container'>
         <h2 className='h2'>Users data pagination</h2>
         {
@@ -81,7 +77,7 @@ function App() {
             </>
         }
       </div>
-    </>
+    </section>
   );
 }
 
